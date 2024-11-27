@@ -2,11 +2,11 @@
 
 >1. Descreva o esquema JSON correspondente ao exemplo acima.
 
-O arquivo Json está descrito em **[ERP-Descrito](./Desafio%201/ERP-Descrito.txt)**
+O arquivo Json está descrito em **[ERP-Descrito](./assets/ERP-Descrito.txt)**
 
->2.Transcreva o JSON para tabelas SQL. A implementação deve fazer sentido paraoperações de restaurante.
+>2.Transcreva o JSON para tabelas SQL. A implementação deve fazer sentido para operações de restaurante.
 
-A query SQL está em **[JsonToSQL](./Desafio%201/ERP.sql)**
+A query SQL está em **[JsonToSQL](./assets/ERP.sql)**
 
 >3. Descreva a abordagem escolhida em detalhes. Justifique a escolha.
 
@@ -14,7 +14,7 @@ A query SQL está em **[JsonToSQL](./Desafio%201/ERP.sql)**
 
 Minha abordagem foi a seguinte:
 
-Usei a Racionalidade do Modelo Relacional - trazendo otimização para consultas analíticas e operacionais e suporte para análise de tendências de itens e desempenho de funcionários. Trazendo consigo, benefícios como reduz duplicidade de dados e o acesso eficiente às informações via chaves estrangeiras.
+Usei a Racionalidade do Modelo Relacional - trazendo otimização para consultas analíticas e operacionais e suporte para análise de tendências de itens e desempenho de funcionários. Trazendo consigo, benefícios como reduzir a duplicidade de dados e o acesso eficiente às informações via chaves estrangeiras.
 
 # Desafio 2
 
@@ -37,3 +37,4 @@ Aqui eu usei uma hierarquia por loja e data, pois facilita buscas e indexação,
 > Considere que a resposta do endpoint getGuestChecks foi alterada, por exemplo, guestChecks.taxes foi renomeado para guestChecks.taxation. O que isso implicaria?
 
 Seria necessário atualizar todo o esquema ETL para trocar 'taxes' por 'taxation' e fazer ajustes nas queries SQL. Além do que foi dito, seria necessário implementar versionamentos do esquema para lidar com as alterações futuras.
+
