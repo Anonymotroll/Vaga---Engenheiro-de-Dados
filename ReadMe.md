@@ -2,11 +2,11 @@
 
 >1. Descreva o esquema JSON correspondente ao exemplo acima.
 
-O arquivo Json está descrito em **[ERP-Descrito](./ERP-Descrito.json)**
+O arquivo Json está descrito em **[ERP-Descrito](./Desafio%201/ERP-Descrito.txt)**
 
 >2.Transcreva o JSON para tabelas SQL. A implementação deve fazer sentido paraoperações de restaurante.
 
-A query SQL está em **[JsonToSQL](./ERP.sql)**
+A query SQL está em **[JsonToSQL](./Desafio%201/ERP.sql)**
 
 >3. Descreva a abordagem escolhida em detalhes. Justifique a escolha.
 
