@@ -1,0 +1,78 @@
+Descrição de cada campo do JSON:
+
+{
+    "curUTC": "string",   // Data e hora atual no formato UTC.
+    "locRef": "string",   // Referência do local da loja.
+    "guestChecks": [    // Lista de pedidos realizados.
+        {
+            "guestCheckId": "integer",  // ID do pedido.
+            "chkNum": "integer",        // Número do pedido.
+            "opnBusDt": "string(date)", // Data de abertura do pedido.
+            "opnUTC": "string",         // Data e hora UTC de abertura.
+            "opnLcl": "string",         // Data e hora local de abertura.
+            "clsdBusDt": "string(date)", // Data de fechamento do pedido.
+            "clsdUTC": "string",        // Data e hora UTC de fechamento.
+            "clsdLcl": "string",        // Data e hora local de fechamento.
+            "lastTransUTC": "string",   // Data e hora UTC da última transação.
+            "lastTransLcl": "string",   // Data e hora local da última transação.
+            "lastUpdatedUTC": "string", // Data e hora UTC da última atualização.
+            "lastUpdatedLcl": "string", // Data e hora local da última atualização.
+            "clsdFlag": "boolean",      // Indica se o pedido foi fechado (dado booleano).
+            "gstCnt": "integer",        // Contador de convidados.
+            "subTtl": "float",          // Subtotal do pedido.
+            "nonTxblSlsTtl": "float|null", // Total de vendas não tributáveis (nulo se inexistente).
+            "chkTtl": "float",          // Total do pedido.
+            "dscTtl": "float",          // Total de descontos aplicados.
+            "payTtl": "float",          // Total pago.
+            "balDueTtl": "float|null",  // Saldo devido (nulo se inexistente).
+            "rvcNum": "integer",        // Número do ponto de serviço (caixa).
+            "otNum": "integer",         // Número de turno.
+            "ocNum": "integer|null",    // Número de ocupação (nulo se não houver ocupação).
+            "tblNum": "integer",        // Número da mesa.
+            "tblName": "string",        // Nome da mesa.
+            "empNum": "integer",        // Número do funcionário responsável.
+            "numSrvcRd": "integer",     // Número de rodadas de serviço.
+            "numChkPrntd": "integer",   // Número de cópias de impressão do pedido.
+            "taxes": [                // Lista de impostos aplicados.
+                {
+                    "taxNum": "integer",  // ID do imposto.
+                    "txblSlsTtl": "float", // Total tributável.
+                    "taxCollTtl": "float", // Total coletado.
+                    "taxRate": "float",    // Taxa do imposto (%).
+                    "type": "integer"      // Tipo de imposto.
+                }
+            ],
+            "detailLines": [          // Linhas de detalhes do pedido.
+                {
+                    "guestCheckLineItemId": "integer",  // ID do item do pedido.
+                    "rvcNum": "integer",                // Número do ponto de serviço.
+                    "dtlOtNum": "integer",              // Número do turno.
+                    "dtlOcNum": "integer|null",         // Número de ocupação (nulo se inexistente).
+                    "lineNum": "integer",               // Número da linha.
+                    "dtlId": "integer",                 // ID do detalhe.
+                    "detailUTC": "string",              // Data e hora UTC do detalhe.
+                    "detailLcl": "string",              // Data e hora local do detalhe.
+                    "lastUpdateUTC": "string",          // Data e hora UTC da última atualização.
+                    "lastUpdateLcl": "string",          // Data e hora local da última atualização.
+                    "busDt": "string(date)",            // Data do negócio.
+                    "wsNum": "integer",                 // Número da estação de trabalho.
+                    "dspTtl": "float",                  // Total exibido.
+                    "dspQty": "integer",                // Quantidade exibida.
+                    "aggTtl": "float",                  // Total agregado.
+                    "aggQty": "integer",                // Quantidade agregada.
+                    "chkEmpId": "integer",              // ID do funcionário responsável.
+                    "chkEmpNum": "integer",             // Número do funcionário responsável.
+                    "svcRndNum": "integer",             // Número da rodada de serviço.
+                    "seatNum": "integer",               // Número do assento.
+                    "menuItem": {                     // Informações do item do menu.
+                        "miNum": "integer",              // Número do item do menu.
+                        "modFlag": "boolean",            // Indica se há modificações.
+                        "inclTax": "float",              // Valor do imposto incluído.
+                        "activeTaxes": "string",         // Impostos ativos.
+                        "prcLvl": "integer"              // Nível de preço.
+                    }
+                }
+            ]
+        }
+    ]
+}
