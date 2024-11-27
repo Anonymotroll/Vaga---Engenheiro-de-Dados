@@ -20,7 +20,7 @@ CREATE TABLE guestChecks (
 -- A tabela detailLines contém os detalhes do pedido
 
 CREATE TABLE detailLines (
-    guestCheckLineItemId INTEGER PRIMARY KEY,
+    guestCheckLineItemId FLOAT PRIMARY KEY,
     guestCheckId INTEGER,
     lineNum INTEGER,
     dspTtl FLOAT,
@@ -34,7 +34,7 @@ CREATE TABLE detailLines (
 
 CREATE TABLE menuItem (
     miNum INTEGER PRIMARY KEY,
-    guestCheckLineItemId INTEGER,
+    guestCheckLineItemId FLOAT,
     modFlag BOOLEAN,
     inclTax FLOAT,
     activeTaxes TEXT,
@@ -61,3 +61,7 @@ INSERT INTO menuItem (
 ) VALUES (
     6042, 9988776655, FALSE, 20.809091, '28', 3
 );
+
+-- Para teste:
+
+SELECT * FROM guestChecks;
